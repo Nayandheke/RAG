@@ -2,14 +2,14 @@
 
 A robust Retrieval-Augmented Generation (RAG) system that allows you to chat with your PDF documents using Google's Gemini AI and LangChain.
 
-## 🚀 Features
+## Features
 
 - **PDF Processing**: Seamlessly load and split PDF documents.
 - **Vector Search**: High-performance similarity search using FAISS and HuggingFace embeddings.
 - **AI Generation**: Context-aware answers powered by Google Gemini 1.5 Flash.
 - **Modular Design**: Clean, maintainable code structure suitable for production.
 
-## 🛠️ Project Structure
+## Project Structure
 
 ```text
 RAG/
@@ -27,12 +27,12 @@ RAG/
 └── requirements.txt    # Python dependencies
 ```
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.8+
 - Google Gemini API Key
 
-## ⚙️ Setup
+## Setup
 
 1. **Clone the repository**:
    ```bash
@@ -52,10 +52,16 @@ RAG/
    GEMINI_API_KEY=your_actual_api_key_here
    ```
 
-## 🏃 Usage
+## Usage
 
-Run the main script to start the interactive chat session:
+### Option 1: Streamlit Web Interface (Recommended)
+Run the Streamlit app for a modern chat experience:
+```bash
+streamlit run src/app.py
+```
 
+### Option 2: Terminal Interface
+Run the main script to start an interactive terminal chat session:
 ```bash
 python -m src.main
 ```
@@ -63,8 +69,4 @@ python -m src.main
 The system will:
 1. Load and process `data/sample.pdf` if no index exists.
 2. Build a local FAISS vector store.
-3. Prompt you to ask questions based on the document's content.
-
-## 📄 License
-
-MIT License. See [LICENSE](LICENSE) for details.
+3. Allow you to ask questions based on the document's content.

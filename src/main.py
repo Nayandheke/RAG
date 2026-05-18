@@ -1,3 +1,9 @@
+import os
+import sys
+
+# Add the project root to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from src.document_loader import load_and_split_pdf
 from src.vector_store import create_vector_store, load_vector_store
 from src.generator import generate_response
